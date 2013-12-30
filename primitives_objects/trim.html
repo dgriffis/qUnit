@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<title> Advanced JavaScript Project: trim() </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../resources/qunit.css" />
+	<script src="../resources/qunit.js"></script>
+	<script src="trim.js"></script>
+
+<script>
+	test("my trim function", function() {
+		equal(trim(null), "");
+		equal(trim(undefined), "");
+		equal(trim(123), "");
+		equal(trim(""), "");
+		equal(trim("       "), "");
+		equal(trim("    Hello World."), "Hello World.");
+		equal(trim("Hello World.    "), "Hello World.");
+		equal(trim( "    Hello World.    "), "Hello World.");
+		equal(trim("my trim function"), "my trim function");
+	});
+	</script>
+</head>
+<body>
+	<div id="qunit"></div>
+</body>
+</html> 
